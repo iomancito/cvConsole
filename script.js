@@ -38,20 +38,18 @@ window.addEventListener('load',
 	$('#linea5').html("Let's start by typing 'help'.");
 	$('#linea4').html("You can also use tab key to autocomplete or show command list.");
 	$("#comando").val("");
-	
-	$("html").on("conhtmlmenu",function(){
-		return false;
-	 }); 
-	 $("#comando").focus();
+	window.oncontextmenu = function() {return false;}
+	$("#comando").focus();
   }, false);
 
 
 $(function() {
-	//on click focus label
+	//on click focus input text comando
 	$("html").mousedown(function(e){
 		e.preventDefault();
 		$("#comando").focus();
 	});
+	
 	/*
 	//botón salir
 	$('#exit').click(function() {
