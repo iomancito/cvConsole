@@ -22,7 +22,7 @@ let cv = '{	"contacto": { "nombre": "Rubén", "apellidos": "Lahoz Sánchez", "em
 						' { "desc":"Otros",						"datos": ["Git", "Docker", "Docker compose", "Spring boot (API REST)"]}'+
 					'] }';
 //listado de comandos para el autocompletar
-let listaComandos = ['help','contact','profile','education','experience','curses','technologies', 'languages', 'pdf'];
+let listaComandos = ['help','contact','profile','education','experience','courses','technologies', 'languages', 'pdf'];
 //conversion a objeto JSON
 cv1 = JSON.parse(cv);
 //htmlo escrito en la consola para el autocompletar
@@ -114,12 +114,12 @@ function comando(cmd){
 	switch(cmd.toLowerCase()){
 		case "help":
 			scrollUp("");
-			scrollUp("help : Ésta ayuda.");
+			scrollUp("help : Esta ayuda.");
 			scrollUp("contact: Datos personales y de contacto.");
 			scrollUp("profile: Sobre mí.");
 			scrollUp("education: Lista de estudios cursados.");
 			scrollUp("experience: Experiencia laboral.");
-			scrollUp("curses: Otros cursos de interés.");
+			scrollUp("courses: Otros cursos de interés.");
 			scrollUp("technologies: Tecnologías conocidas.");
 			scrollUp("languages: Idiomas");
 			scrollUp("pdf : Descarga del CV en pdf");
